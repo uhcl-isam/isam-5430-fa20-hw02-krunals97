@@ -24,6 +24,35 @@ namespace CSharp.Assignments.Loop1
         {
             // prompt user for non-negative miles and obtain the input from user
             // codes go here.
+           float totalMiles = 0;
+            float totalGallons = 0;
+            while (true)
+            {
+                Console.WriteLine("Enter the miles driven: ");
+                int miles = int.Parse(Console.ReadLine());
+                if (miles < 0)
+                {
+                    break;
+                }
+                totalMiles = totalMiles + miles;
+                Console.WriteLine("Enter the gallons used: ");
+                int gallons = int.Parse(Console.ReadLine());
+
+                totalGallons = totalGallons + gallons;
+               float mpg = (float)miles / gallons;
+                float totalMPG = totalMiles / totalGallons;
+                if (mpg < 0)
+                {
+                    return;
+                }
+
+
+                Console.WriteLine("MPG this tankful: {0:F2}", mpg);
+                Console.WriteLine("Total MPG: {0:F2}", totalMPG);
+            }
+            Console.ReadLine();
         }
     }
+
 }
+

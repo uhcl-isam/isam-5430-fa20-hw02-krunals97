@@ -24,6 +24,35 @@ namespace CSharp.Assignments.Loop1
         {
             // get first number and assign it to variable largest
             // write your codes here
+            int number, counter, largest = -32768, largest2 = -32768; Console.WriteLine("enter the numbers to be compared");
+
+            for (counter = 1; counter <= 10; counter++)
+            {
+                number = int.Parse(Console.ReadLine()); if (largest < number)
+
+                {
+
+                    largest2 = largest; largest = number;
+                }
+
+
+                else if (largest2 < number)
+                {
+                    largest2 = number;
+                    //Console.WriteLine("ass");
+                }
+
+
+
+
+                Console.WriteLine("Largest Number" + largest); Console.WriteLine("Second Largest" + largest2);
+            }
+
+
+
+
         }
+
+
     }
 }

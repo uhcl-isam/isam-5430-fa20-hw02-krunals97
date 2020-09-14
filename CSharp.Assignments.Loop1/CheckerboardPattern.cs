@@ -10,7 +10,7 @@ namespace CSharp.Assignments.Loop1
     /// [Hint: Iteration statements are required.]
     /// <example>
     /// For 8 rows and a fill character of '*', the app will produce
-    ///  an 8 by 8 checkerboard as follows:
+    ///  an 8 by 8 checkerboard as follows: 
     /// * * * * * * * *
     ///  * * * * * * * *
     /// * * * * * * * *
@@ -29,8 +29,29 @@ namespace CSharp.Assignments.Loop1
             int num = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter the fill character: ");
             char fillChar = Char.Parse(Console.ReadLine());
-
             // Write your codes here.
+            int count = 1;
+            char space = ' ';
+
+            while (count <= num)
+            {
+                if (count % 2 == 0)
+                {
+                    Console.Write(space);
+                }
+                int fillcount = 0;
+                while (fillcount < num)
+                {
+                    Console.Write(fillChar);
+                    Console.Write(space);
+                    ++fillcount;
+                }
+                Console.WriteLine(space);
+                ++count;
+            }
+            Console.ReadLine();
         }
+
     }
 }
+

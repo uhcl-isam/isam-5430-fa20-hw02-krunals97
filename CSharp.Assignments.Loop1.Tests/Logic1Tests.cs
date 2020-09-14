@@ -118,6 +118,7 @@ namespace CSharp.Assignments.Loop1.Tests
         }
 
         [Category("Selection")]
+        [Test]
         public void TeaParty()
         {
             Assert.AreEqual(1, Logic1.TeaParty(6, 8));
