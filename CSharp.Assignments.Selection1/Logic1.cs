@@ -231,9 +231,32 @@ namespace CSharp.Assignments.Loop1
         /// Use % 10 and / 10 to fetch and reduce each digit.
         /// </summary>
         /// <param name="number">Number.</param>
-        public static bool IsHilly(int number)
+        public static bool IsHilly(int number)  // 132
         {
-            return false;
+            if (number <= 99)
+                return false;
+            int rem = 0,prev=-999;
+            bool flag = false;
+            while(number != 0)
+            {
+                rem = number % 10;
+
+                if (prev <= rem)
+                {
+                    if (flag)
+                        return false;
+                    flag = false;
+                    prev = rem;
+                }
+                else
+                {
+                    flag = true;
+                    prev = rem;
+                }
+
+                number = number / 10;
+            }
+            return true;
         }
 
         /// <summary>

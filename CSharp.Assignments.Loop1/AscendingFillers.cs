@@ -23,7 +23,29 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
+            string input;
+            int prev = -999;
+            int num, res = 0; // 1 3 5 2 7 5
             // Complete your loop codes here.
+            while ((input = Console.ReadLine()) != null && input != " ")
+            {
+               num = int.Parse(input);
+               if(num == 0)
+                {
+                    prev = 0;
+                }
+                else if(prev < num)
+                {
+                    prev = num;
+                }
+               else
+                {
+                   res =  res + ((prev - num) + 1);
+                    prev = num + ((prev-num)+1);
+                }
+
+            }
+            Console.WriteLine(res);
         }
     }
 }

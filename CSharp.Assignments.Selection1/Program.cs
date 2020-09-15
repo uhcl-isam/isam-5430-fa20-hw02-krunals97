@@ -7,7 +7,6 @@ namespace CSharp.Assignments.Selection1
         static void Main(string[] args)
         {
             Console.WriteLine("hello world");
-
         }
     }
 }
